@@ -4,7 +4,7 @@ const VideoCard = ({stats, snippet}) => {
     const {thumbnails, title, channelTitle} = snippet;
     const {viewCount, likeCount} = stats;
     return (
-        <div className="p-2 m-2 w-64 shadow-lg rounded-2xl hover:border-2 border-amber-500">
+        <div className="p-2 m-2 w-80 shadow-lg rounded-2xl hover:border-2 border-amber-500">
             <img
                 className="rounded-lg mt-1"
                 src={thumbnails?.medium.url}
@@ -17,5 +17,9 @@ const VideoCard = ({stats, snippet}) => {
         </div>
     );
 };
+
+export const RedBorderVideoCard = ({stats, snippet}) => {
+    return <div className="m-1 border-4 border-red-900 rounded-2xl"><VideoCard snippet={snippet} stats={stats}/></div>
+}
 
 export default VideoCard;

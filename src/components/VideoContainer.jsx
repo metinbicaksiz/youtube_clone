@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from "react-redux";
 import useGetPopularVideos from "../hooks/useGetPopularVideos";
-import VideoCard from "./VideoCard";
+import VideoCard, { RedBorderVideoCard} from "./VideoCard";
 import {Link} from "react-router-dom";
 
 const VideoContainer = () => {
@@ -11,6 +11,7 @@ const VideoContainer = () => {
 
     return (
         <div className="flex flex-wrap">
+            {popularVideos[0] && <RedBorderVideoCard snippet={popularVideos[0]?.snippet} stats={popularVideos[0]?.statistics}/>}
             {
                 popularVideos &&
                 popularVideos.map((video) => (
