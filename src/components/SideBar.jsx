@@ -7,7 +7,7 @@ const SideBar = () => {
 
     if (!isOpen) return null;
     return (
-        <div className="p-2 mr-2 w-48">
+        <div className="p-2 ml-3 mr-4 w-48">
             <ul>
                 <li><Link to="/" className="hover:font-bold hover:text-lg">Home</Link></li>
                 <li>Shorts</li>

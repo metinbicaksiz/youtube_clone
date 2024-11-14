@@ -26,14 +26,14 @@ const Header = () => {
                     />
                 </a>
             </div>
-            <div className="flex col-span-10 items-center">
+            <div className="flex col-span-10 place-content-center">
                 <input
                     className="w-1/2 rounded-l-full border-2 border-amber-400 p-2"
                     type="text"
                 />
                 <button className="text-blue-500 border-2 border-amber-400 rounded-r-full p-2 bg-gray-100">Search</button>
             </div>
-            <div className="flex col-span-1">
+            <div className="flex col-span-1 place-content-end">
                 <img
                     className="h-10"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/640px-User_icon_2.svg.png"
