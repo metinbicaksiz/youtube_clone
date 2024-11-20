@@ -4,7 +4,6 @@ import Body from "./components/Body";
 import {Provider} from "react-redux";
 import store from "./utils/store";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import SideBar from "./components/SideBar";
 import MainContainer from "./components/MainContainer";
 import WatchPage from "./components/WatchPage";
 
@@ -23,7 +22,9 @@ const appRouter = createBrowserRouter([
             }
         ],
     },
-])
+], {
+    basename: "/youtube",
+})
 
 function App() {
   return (

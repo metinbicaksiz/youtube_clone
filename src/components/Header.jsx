@@ -18,7 +18,7 @@ const Header = () => {
                      alt="hamburger menu"
                     onClick={() => toggleMenuHandler()}
                 />
-                <a href="/">
+                <a href="/youtube">
                     <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1024px-Logo_of_YouTube_%282015-2017%29.svg.png"
                         className="h-8"
