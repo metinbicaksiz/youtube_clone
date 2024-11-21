@@ -23,7 +23,7 @@ const appRouter = createBrowserRouter([
         ],
     },
 ], {
-    basename: "/youtube",
+    // basename: "/youtube",
 })
 
 function App() {

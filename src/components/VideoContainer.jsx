@@ -8,6 +8,7 @@ const VideoContainer = () => {
     const popularVideos = useSelector(state => state.video.popularVideos);
 
     useGetPopularVideos();
+    console.log(popularVideos);
 
     return (
         <div className="flex flex-wrap">
