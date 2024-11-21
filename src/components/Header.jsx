@@ -17,7 +17,7 @@ const Header = () => {
     }
 
     return (
-        <div className="grid grid-flow-col p-4 shadow-lg dark:bg-clooney dark:border-b-4 dark:border-gray-200">
+        <div className="grid grid-flow-col p-4 shadow-lg dark:bg-gray transition dark:border-b-2 dark:border-gray-200">
             <div className="flex col-span-1 gap-4">
                 <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png"
@@ -35,22 +35,15 @@ const Header = () => {
             </div>
             <div className="flex col-span-10 place-content-center">
                 <input
-                    className="w-1/2 rounded-l-full border-2 border-amber-400 p-2"
+                    className="w-1/2 rounded-l-full border-2 border-amber-400 p-2 bg-white dark:bg-snowman"
                     type="text"
                 />
-                <button className="text-blue-500 border-2 border-amber-400 rounded-r-full p-2 bg-gray-100">Search</button>
+                <button className="text-blue-500 border-2 border-amber-400 rounded-r-full p-2 bg-gray dark:bg-snowman ">Search</button>
             </div>
             <div className="flex col-span-1 place-content-end">
-                <button
-                    onClick={darkModeHandler}
-                    className="p-3 mx-3"
-                >
-                    {
-                        dark && <IoSunny size="24px" />
-                    }
-                    {
-                        !dark && <IoMoon size="24px" />
-                    }
+                <button onClick={darkModeHandler}  className="p-3 mx-3">
+                    { dark && <IoSunny size="24px" /> }
+                    { !dark && <IoMoon size="24px" /> }
                 </button>
                 <img
                     className="h-10"

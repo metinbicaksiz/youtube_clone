@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 
 const Body = () => {
     return (
-        <div className="flex dark:bg-clooney">
+        <div className="flex dark:bg-gray transition duration-200">
             <SideBar />
             <Outlet />
         </div>
