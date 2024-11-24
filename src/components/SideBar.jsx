@@ -9,23 +9,23 @@ const SideBar = () => {
     return (
         <div className="p-2 ml-3 mr-4 w-48 dark:border-r-2 dark:border-gandalf dark:rounded-lg dark:text-snowman">
             <ul>
-                <li><Link to="/" className="hover:font-bold hover:text-lg">Home</Link></li>
-                <li>Shorts</li>
-                <li>Live</li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Home</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Shorts</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Live</Link></li>
             </ul>
-            <h1 className="font-bold">Subscriptions</h1>
+            <h1 className="font-bold pt-5">Subscriptions</h1>
             <ul>
-                <li>Music</li>
-                <li>Sports</li>
-                <li>Gaming</li>
-                <li>Movies</li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Music</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Sports</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Gaming</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Movies</Link></li>
             </ul>
             <h1 className="font-bold pt-5">Watch Later</h1>
             <ul>
-                <li>Music</li>
-                <li>Sports</li>
-                <li>Gaming</li>
-                <li>Movies</li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Music</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Sports</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Gaming</Link></li>
+                <li><Link to="/youtube" className="hover:font-bold hover:text-lg">Movies</Link></li>
             </ul>
         </div>
     );
