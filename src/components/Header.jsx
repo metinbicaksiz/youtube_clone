@@ -63,7 +63,7 @@ const Header = () => {
                 </a>
             </div>
             <div className="col-span-10 place-content-center">
-                <div>
+                <div className="flex justify-center">
                     <input
                         className="w-1/2 rounded-l-full border-2 border-amber-400 p-2 bg-white dark:bg-snowman"
                         type="text"
@@ -74,16 +74,18 @@ const Header = () => {
                     />
                     <button className="text-blue-500 border-2 border-amber-400 rounded-r-full p-2 bg-beige dark:bg-snowman ">Search</button>
                 </div>
-                {
-                    showSuggestion &&
-                    <div className="absolute bg-white py-2 px-5 w-[37rem] rounded-2xl">
-                        <ul>
-                            {suggestions.map((suggestion, i) => (
-                                <li key={i} className="p-1 m-1 shadow-sm hover:bg-beige rounded-lg"><span className="mr-4">🔎</span>{suggestion}</li>
-                            ))}
-                        </ul>
-                    </div>
-                }
+                <div className="flex justify-center">
+                    {
+                        showSuggestion &&
+                        <div className="absolute bg-white dark:bg-surface py-2 w-[40rem] rounded-2xl">
+                            <ul>
+                                {suggestions.map((suggestion, i) => (
+                                    <li key={i} className="p-1 m-1 shadow-sm hover:bg-beige dark:text-snowman dark:hover:text-black rounded-lg"><span className="mr-4">🔎</span>{suggestion}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    }
+                </div>
             </div>
             <div className="flex col-span-1 place-content-end">
                 <button onClick={darkModeHandler}  className="p-3 mx-3">
