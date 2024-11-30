@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {toggleDarkMode, toggleMenu} from "../slices/appSlice";
+import {toggleMenu} from "../slices/appSlice";
 import {IoMoon, IoSunny} from "react-icons/io5";
 import {YOUTUBE_SEARCH_API} from "../utils/constants";
 import {cacheResults} from "../slices/searchSlice";
@@ -9,6 +9,7 @@ const Header = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const [suggestions, setSuggestions] = useState([]);
     const [showSuggestion, setShowSuggestion] = useState(false);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || 'light');
     const dispatch = useDispatch();
     const dark = useSelector(state => state.app.darkMode);
     const cache = useSelector(state => state.search);
@@ -18,9 +19,17 @@ const Header = () => {
     }
 
     const darkModeHandler = () => {
-        dispatch(toggleDarkMode());
-        document.body.classList.toggle("dark");
+        setTheme(theme === 'dark' ? 'light' : 'dark');
     }
+
+    useEffect(() => {
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     useEffect(() => {
         const timer =  setTimeout(() => {
